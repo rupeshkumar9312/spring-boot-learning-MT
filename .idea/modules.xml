@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Spring-Boot-Learning.iml" filepath="$PROJECT_DIR$/.idea/Spring-Boot-Learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crud-app/crud-app.iml" filepath="$PROJECT_DIR$/crud-app/crud-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/first-app/first-app.iml" filepath="$PROJECT_DIR$/first-app/first-app.iml" />
     </modules>
   </component>
