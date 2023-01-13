@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  loans-app:
+    image: "rupeshkmrk/loans-01:1.0"
+    ports:
+      - "8081:8081"
+    networks:
+      - test-network
+  accounts-app:
+    image: "rupeshkmrk/accounts-01:1.0"
+    ports:
+      - "8090:8090"
+    networks:
+      - test-network
+networks:
+  test-network:
