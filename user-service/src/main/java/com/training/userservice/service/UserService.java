@@ -10,4 +10,9 @@ public interface UserService {
     User addUser(User user) throws JsonProcessingException;
     List<User> getAllUsers();
     List<User> saveAllUsers(List<User> users);
+    User getUserByUserId(Integer userId);
+
+    void deleteUserById(Integer userId);
+
+    User updateUserById(Integer userId, User user);
 }

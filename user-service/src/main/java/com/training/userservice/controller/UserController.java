@@ -10,13 +10,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")
+@CrossOrigin(origins = "http://localhost:3000")
 public class UserController {
 
     @Autowired
     private UserService userService;
 
     @PostMapping
-    @CrossOrigin(origins = "http://localhost:3000")
     public User addUser(@RequestBody User user) throws JsonProcessingException {
 //        System.out.println("");
         return  userService.addUser(user);
@@ -30,5 +30,20 @@ public class UserController {
     @PostMapping("/all")
     public List<User> addAllUsers(@RequestBody List<User> users){
         return userService.saveAllUsers(users);
+    }
+
+    @DeleteMapping("/{userId}")
+    public void deleteUserById(@PathVariable Integer userId){
+        userService.deleteUserById(userId);
+    }
+
+    @GetMapping("/{userId}")
+    public User getUserById(@PathVariable Integer userId){
+        return userService.getUserByUserId(userId);
+    }
+
+    @PutMapping("/{userId}")
+    public User updateUser(@RequestBody User user,@PathVariable Integer userId){
+        return userService.updateUserById(userId,user);
     }
 }
